@@ -1,6 +1,6 @@
 # Myelin
 
-![](https://logo.png)
+![](https://github.com/sregojo/Myelin/blob/master/artwork/logo.jpg)
 
 
 This repository contains Myelin "core".
