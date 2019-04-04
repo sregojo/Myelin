@@ -16,6 +16,8 @@ namespace Myelin.Event
             this.Instance = instance;
         }
 
+        public Guid CommandId { get; }
+
         public Guid AggregateRootId { get; }
         public long Version { get; }
         public IEvent Instance { get; }

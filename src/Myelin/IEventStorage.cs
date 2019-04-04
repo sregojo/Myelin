@@ -5,13 +5,10 @@ namespace Myelin
 {
     public interface IEventStorage
     {
-        T Load<T>(Guid aggregateRootId)
+        T Load<T>(Guid eventSourcedId)
             where T : IEventSourced;
 
-        IEnumerable<IPersistedEvent> Store<T>(T eventSourced, IEnumerable<IEvent> events)
-            where T : IEventSourced;
-
-        T Store<T>(T eventSourced)
-            where T : IEventSourced;
+        IEnumerable<IPersistedEvent> Store<T>(ICommand<T> command, IEnumerable<IEvent> events)
+            where T : IAggregateRoot;
     }
 }
